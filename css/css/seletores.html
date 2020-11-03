@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Selectors</title>
+    <link rel="stylesheet" href="css/tag.css">
+    <style>
+
+    /* "*" seleciona todos os elementos */
+
+    /* ".tag" seleciona tudo demarcado com a CLASS tag */
+
+    /* "#aprovados" seleciona apenas a ID aprovados */
+    /* "#aninhados > div" seleciona a div filha de anhinados */
+    /* "#aninhados section" seleciona essa tag em aninhados */
+
+    /* "p + ol" seleciona o ol que tem p anterior */
+    /* "p ~ ol" seleciona um ol mais procimo de um p */
+
+    /* "[feira]" seleciona todos com lementos feira */
+    /* "[feira=casa]" seleciona todos os elementos feiras preenchidos com casa */
+    /* "[feira*=sa]" seleciona todos que possua as lestras "sa" */
+
+    /* "span:nth-child(1)" seleciona o elemento filho de span */
+
+    /* "section > :nth-child(odd)" selecion os filhos inpares */
+    /* "section > :nth-child(even)" selecion os filhos pares */
+
+    *{
+        color: #ff0;
+        background-color: #f77;
+    }
+
+
+    </style>
+</head>
+
+<body>
+    <div class='tag'>
+        <div class='tag'>
+            <p class='tag'>1</p>
+            <ul class='tag' feira='casa'>
+                <li>Arroz</li>
+                <li>Feijão</li>
+            </ul>
+            <ul class='tag' feira='escritorio empresa'>
+                <li>Café</li>
+                <li>Água</li>
+            </ul>
+            <ol id='aprovados' class='tag'>
+                <li>Maria</li>
+                <li>Pedro</li>
+                <li>Ana</li>
+            </ol>
+            <div id='aninhado' class='tag'>
+                <div class="tag">
+                    <section class='tag'>
+                        <span class='tag'>1</span>
+                        <p class='tag'>2</p>
+                        <span class='tag'>3</span>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/tag.js"></script>
+</body>
+
+</html>

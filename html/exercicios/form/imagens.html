@@ -1,0 +1,107 @@
+<h1>Silde show!</h1>
+<div wm-slider>
+    <p>
+        <img src="img/muro.jpg" 
+        alt="Muro da cidade"
+        width="513" height="342"
+        title="Muro da cidade por Tarso Bessa">
+    </p>
+    <p>
+        <img src="img/gif-aleatorio.gif" 
+        alt="gif aleatorio" height="400" >
+    </p>
+    <p class="circular">
+        <img src="img/rio-de-janeiro.jpg" 
+        alt="Rio de Janeiro" height="342">
+    </p>
+
+    <p class="texto">
+        <img src="img/avatar.jpg" 
+        alt="Avatar" height="50" align=left>
+        hbcijdcjhdc  bdsb hjs nsbn b ud n nb j nnsncjbcjncsb jn n n klsmn kj
+        hbcijdcjhdc  bdsb hjs nsbn b ud n nb j nnsncjbcjncsb jn n n klsmn kj
+        hbcijdcjhdc  bdsb hjs nsbn b ud n nb j nnsncjbcjncsb jn n n klsmn kj
+        hbcijdcjhdc  bdsb hjs nsbn b ud n nb j nnsncjbcjncsb jn n n klsmn kj
+        hbcijdcjhdc  bdsb hjs nsbn b ud n nb j nnsncjbcjncsb jn n n klsmn kj
+        hbcijdcjhdc  bdsb hjs nsbn b ud n nb j nnsncjbcjncsb jn n n klsmn kj
+        hbcijdcjhdc  bdsb hjs nsbn b ud n nb j nnsncjbcjncsb jn n n klsmn kj
+        hbcijdcjhdc  bdsb hjs nsbn b ud n nb j nnsncjbcjncsb jn n n klsmn kj
+
+    </p>
+
+    <p class="cidade"></p>
+
+    <p>
+        <picture>
+            <source src="img/logo-longo.png" alt="logo"
+            media="(min-width: 60px)">
+            <img src="img/logo-curta.png" alt="logo"> 
+        </picture>
+    </p>
+
+</div>
+
+<style>
+
+    p{
+        position: absolute;
+        display: none;
+    }
+
+    .circular {
+        width: 513px;
+        background-color: #444;
+    }
+
+    p.texto{
+        margin-left: 10px;
+        width: 500px;
+        height: 500px;
+    }
+
+    img{
+        position: absolute;
+    }
+
+</style>
+
+<script>
+    function mover(elem, inicio, fim, passo, callback){
+        const novoInicio = inicio - passo
+        if(novoInicio >= fim){
+            elem.style.left = novoInicio + 'px'
+            setTimeout(() => mover(elem, novoInicio, fim, passo, callback), 7)
+        }else{
+            callback()
+        }
+    }
+
+
+    function slider(){
+        const elementos = document.querySelectorAll('[wm-slider] > p')
+        const slides = Array.from(elementos)
+        exibirSlide(slides, slides[0])
+     }
+
+    function exibirSlide(slides, slide){
+        slide.style.display = 'block'
+
+        const inicio = 1500
+        const fim = -800
+
+        slide.style.left = `${inicio}px`
+
+        mover(slide, inicio, fim, 5, () => {
+        slide.style.display = "none"
+        exibirSlide(slides, getProximo(slides, slide))
+        })
+    }
+
+    function getProximo(lista, atual){
+        const i = lista.indexOf(atual) + 1
+        return i < lista.length ? lista[i] : lista[0]
+    }
+
+    slider()
+
+</script>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>Modificando HTML #01</title>
+    <link rel='stylesheet' href='css/estilo.css'>
+</head>
+
+<body class='conteudo exercicio'>
+    <script>
+        
+        const body = document.querySelector('body')
+
+        const div = document.createElement('div')
+        div.innerHTML = 'primeiro'
+
+        const p = document.createElement('p')
+        p.innerHTML = 'segundo'
+
+        body.appendChild(div)
+
+        const text = document.createTextNode(' antes ')
+
+        div.insertBefore(text, div.childNodes[0])
+
+    </script>
+</body>
+
+</html>

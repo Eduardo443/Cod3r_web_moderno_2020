@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <h1>Exercicio</h1>
+</head>
+<body>
+    
+</body>
+
+    <nav>
+        <a href="exercicios/texto2.html"> texto2</a> | 
+        <a href="exercicios/listas.html"> listas</a> |
+        <a href="exercicios/links.html"> links</a> | 
+        <a href="exercicios/table.html"> links</a> | 
+        <a href="exercicios/form/form.html"> Formulario</a> | 
+        <a href="exercicios/form/imagens.html"> Imagens</a> | 
+        <a href="exercicios/video.html"> Video</a> | 
+    </nav>
+
+    <insert id="conteudo"></insert>
+
+    <script>
+
+        document.querySelectorAll('a').forEach(link => {
+            const conteudo = document.getElementById('conteudo')
+
+            link.onclick = function(e){
+                e.preventDefault()
+                fetch(link.href)
+                    .then(resp => resp.text())
+                    .then(html => conteudo.innerHTML = html)
+                    .then(console.log)
+
+            }
+        })
+
+    </script>
+
+    <footer><br>footer da pagina</footer>
+
+</html>
