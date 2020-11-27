@@ -1,4 +1,4 @@
-<h1>Curso de Web Moderno da Cod3er</h1>
+<h1>Curso de Web Moderno da Cod3r</h1>
 
 *Meu progresso até o momento: 55% completo*
 
@@ -19,7 +19,7 @@ Tecnologias apresentadas:
 * Webpack
 * JQuery
 * Bootstrap
-* Framework React
+* Library React
 * Framework VUE
 * Framework Angular
 * Bancos Relacionais e não relacionais
