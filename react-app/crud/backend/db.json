@@ -1,20 +1,25 @@
 {
   "users": [
     {
-      "name": "jose",
-      "id": 1,
-      "e-mail": "test1@test.com.br",
-      "email": "test@test.com"
-    },
-    {
       "name": "Edward",
       "id": 2,
-      "e-mail": "test2@test.com.br"
+      "e-mail": "test2@test.com.br",
+      "email": "email@test.com.br"
     },
     {
       "name": "jose test",
       "email": "teste3@test.com.br",
       "id": 3
+    },
+    {
+      "name": "eduard",
+      "email": "test",
+      "id": 4
+    },
+    {
+      "name": "test",
+      "email": "test2",
+      "id": 5
     }
   ]
 }

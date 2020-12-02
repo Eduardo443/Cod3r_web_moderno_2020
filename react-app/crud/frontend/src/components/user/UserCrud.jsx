@@ -42,6 +42,7 @@ class UserCrud extends Component{
     getUpdatedList(user, add = true) {
         const list = this.state.list.filter(u => u.id !== user.id)
         if (add)list.unshift(user)
+        return list
     }
 
     udpadeField(event){
@@ -94,7 +95,7 @@ class UserCrud extends Component{
     }
 
     load(user){
-        this.setState({user})
+        this.setState({ user })
     }
 
     remove(user){
@@ -130,10 +131,13 @@ class UserCrud extends Component{
                     <td>{user.name}</td>
                     <td>{user.email}</td>
                     <td>
+                        {/* editar o cadastro */}
                         <button className="btn btn-warning"
                             onClick={() => this.load(user)}>
                             <i className="fa fa-pencil"></i>
                         </button>
+
+                        {/* apagar o cadastro */}
                         <button className="btn btn-danger ml-2"
                             onClick={() => this.remove(user)}>
                             <i className="fa fa-trash"></i>
