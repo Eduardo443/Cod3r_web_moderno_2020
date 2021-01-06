@@ -1,6 +1,6 @@
 <h1>Curso de Web Moderno da Cod3r</h1>
 
-*Meu progresso até o momento: 55% completo*
+*Meu progresso até o momento: 65% completo*
 
 <h2>Sobre o Curso</h2>
 
