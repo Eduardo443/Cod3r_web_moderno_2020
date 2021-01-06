@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Binding</title>
+    <link rel="stylesheet" href="/css/estilo.css">
+    <script src="/js/vue.min.js"></script>
+</head>
+<body class="exercicio">
+
+    <div id="app">
+        <a :href="link" target="_blank">Test</a>
+
+        <input type="text" v-model="nome">
+        <span>{{nome}}</span>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                nome: 'eduardo',
+                link: 'https://www.google.com'
+            },
+
+            watch: {
+                nome(value){
+                    console.log(value.toUpperCase())
+                }
+            }
+        })
+    </script>
+</body>
+</html>
